@@ -9,7 +9,11 @@ void Print(int* list, const int size);
 
 int main()
 {
+    setlocale(LC_ALL, "Ukrainian");
+
     srand((unsigned)time(NULL));
+
+    //srand(1); // для перевірки правильності способів
 
     const int n = 25;
     int c[n];
@@ -19,6 +23,9 @@ int main()
 
     int sum = 0;
     int count = 0;
+
+    cout << "Iтерацiйний спосiб" << endl; 
+    cout << endl;
 
     Create(c, n, Min, Max);
     cout << "Before: "; Print(c, n);
@@ -49,7 +56,6 @@ void Processing(int* list, const int size, int& sum, int& count) {
             count++;
         }
     }
-    cout << endl;
 }
 
 // Вивід масиву
