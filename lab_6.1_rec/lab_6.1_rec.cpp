@@ -49,7 +49,7 @@ void Create(int* list, const int size, const int Min, const int Max, int i) {
 
 void Processing(int* list, const int size, int& sum, int& count, int i) {
     if (i < size) {
-        if (not(list[i] % 2) || i % 8 != 0) { // парний або індекс не кратрий 8
+        if (!(list[i] % 2) || i % 8 != 0) { // парний або індекс не кратрий 8
             sum += list[i];
             list[i] = 0;
             count++;
